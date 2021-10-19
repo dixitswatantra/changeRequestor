@@ -41,6 +41,13 @@ Bonus:
                  }
               ]
             }
+            
+            {
+              "message": "Bill of 3.0 is not in available Bills ",
+              "details": [
+                  "Bill of 3.0 is not in available Bills "
+              ]
+            }
 
 
 
