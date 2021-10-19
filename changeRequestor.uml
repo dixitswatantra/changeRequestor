@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_aR_U0DD0EeyQGr3C5SIlrA" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_aR_U0TD0EeyQGr3C5SIlrA" source="codegen">
         <details xmi:id="_aR_74DD0EeyQGr3C5SIlrA" key="codegenDirectory" value="/changeRequestor/src/main/java"/>
-        <details xmi:id="_J5VO4DD1EeyQGr3C5SIlrA" key="AssociatedSourceCode" value="/changeRequestor/src/main/java/org/swattech/changerequestor/controller/ChangeRequestorController.java;3841454793/1;/changeRequestor/src/main/java/org/swattech/changerequestor/exception/ChangeRequestorException.java;4272956198/1;/changeRequestor/src/main/java/org/swattech/changerequestor/util/ChangeRequestorUtils.java;3256424456/1;/changeRequestor/src/main/java/org/swattech/changerequestor/exception/ResponseErrorHandler.java;3764264639/1;/changeRequestor/src/main/java/org/swattech/changerequestor/model/Coins.java;3140036088/1;/changeRequestor/src/main/java/org/swattech/changerequestor/service/impl/ChangeCalculatorServiceImpl.java;2114045636/1;/changeRequestor/src/main/java/org/swattech/changerequestor/model/Coins_Detail.java;2983965861/1;/changeRequestor/src/main/java/org/swattech/changerequestor/repository/CoinRepository.java;227679752/1;/changeRequestor/src/main/java/org/swattech/changerequestor/service/ChangeCalculatorService.java;2203466955/1;/changeRequestor/src/main/java/org/swattech/changerequestor/model/CoinsTray.java;2149166439/1;/changeRequestor/src/main/java/org/swattech/changerequestor/util/ChangeRequestorConstants.java;1139501980/1;/changeRequestor/src/main/java/org/swattech/changerequestor/exception/ErrorResponse.java;3596520702/1;/changeRequestor/src/main/java/org/swattech/changerequestor/ChangeRequestorApplication.java;1167776413/1;/changeRequestor/src/test/java/org/swattech/changerequestor/ChangeRequestorApplicationTests.java;3057535398/1;/changeRequestor/src/test/java/org/swattech/changerequestor/ChangeRequestControllerTest.java;2193890862/0;"/>
+        <details xmi:id="_J5VO4DD1EeyQGr3C5SIlrA" key="AssociatedSourceCode" value="/changeRequestor/src/main/java/org/swattech/changerequestor/controller/ChangeRequestorController.java;3593586058/1;/changeRequestor/src/main/java/org/swattech/changerequestor/exception/ChangeRequestorException.java;4272956198/1;/changeRequestor/src/main/java/org/swattech/changerequestor/util/ChangeRequestorUtils.java;3256424456/1;/changeRequestor/src/main/java/org/swattech/changerequestor/exception/ResponseErrorHandler.java;3764264639/1;/changeRequestor/src/main/java/org/swattech/changerequestor/model/Coins.java;3140036088/1;/changeRequestor/src/main/java/org/swattech/changerequestor/service/impl/ChangeCalculatorServiceImpl.java;713296081/1;/changeRequestor/src/main/java/org/swattech/changerequestor/model/Coins_Detail.java;2983965861/1;/changeRequestor/src/main/java/org/swattech/changerequestor/repository/CoinRepository.java;227679752/1;/changeRequestor/src/main/java/org/swattech/changerequestor/service/ChangeCalculatorService.java;1830828064/1;/changeRequestor/src/main/java/org/swattech/changerequestor/model/CoinsTray.java;2149166439/1;/changeRequestor/src/main/java/org/swattech/changerequestor/util/ChangeRequestorConstants.java;1139501980/1;/changeRequestor/src/main/java/org/swattech/changerequestor/exception/ErrorResponse.java;3596520702/1;/changeRequestor/src/main/java/org/swattech/changerequestor/ChangeRequestorApplication.java;1167776413/1;/changeRequestor/src/test/java/org/swattech/changerequestor/ChangeRequestorApplicationTests.java;3057535398/1;/changeRequestor/src/test/java/org/swattech/changerequestor/ChangeRequestorControllerTest.java;879870312/0;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_apvtgDD0EeyQGr3C5SIlrA">
@@ -212,50 +212,6 @@
               <packagedElement xmi:type="uml:Class" xmi:id="_aqTHIDD0EeyQGr3C5SIlrA" name="ChangeCalculatorServiceImpl">
                 <ownedAttribute xmi:id="_a31M0DD0EeyQGr3C5SIlrA" name="coinRepository" type="_aqkM4DD0EeyQGr3C5SIlrA" association="_a5NF0TD0EeyQGr3C5SIlrA"/>
                 <interfaceRealization xmi:id="_azSEADD0EeyQGr3C5SIlrA" client="_aqTHIDD0EeyQGr3C5SIlrA" supplier="_aqsIsDD0EeyQGr3C5SIlrA" contract="_aqsIsDD0EeyQGr3C5SIlrA"/>
-                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_a4y2JDD0EeyQGr3C5SIlrA" name="calculateChangeForABill" specification="_aqVjYDD0EeyQGr3C5SIlrA">
-                  <ownedParameter xmi:id="_a4y2JTD0EeyQGr3C5SIlrA" name="bill">
-                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-                  </ownedParameter>
-                  <ownedParameter xmi:id="_a4y2JjD0EeyQGr3C5SIlrA" type="_aqxBMDD0EeyQGr3C5SIlrA" direction="return">
-                    <name xsi:nil="true"/>
-                  </ownedParameter>
-                  <language>java</language>
-                  <body>boolean contains = ChangeRequestorConstants.availableBills.contains((int) bill);&#xD;
-&#xD;
-		CoinsTray coinsTray = new CoinsTray();&#xD;
-&#xD;
-		if (contains) {&#xD;
-			List&lt;Coins_Detail> coinsAvailable = coinRepository.findAll();&#xD;
-			// Map to have type of coins as Key and no of coins as Values&#xD;
-			Map&lt;Double, Integer> map = coinsAvailable.stream()&#xD;
-					.collect(Collectors.toMap(Coins_Detail::getCoinType, Coins_Detail::getCoinCount));&#xD;
-			// Total amount based on available coins&#xD;
-			double availableAmount = ChangeRequestorUtils.availableAmount(coinsAvailable);&#xD;
-			if (availableAmount &lt; bill) {&#xD;
-				throw new ChangeRequestorException(&quot;Not enough coins available for &quot; + bill + &quot; 's  bill &quot;);&#xD;
-			}&#xD;
-			List&lt;Coins> coins = coinsTray.getCoins();&#xD;
-			// Retrieved values of each type of Coins&#xD;
-			int availableQuarters = map.get(ChangeRequestorConstants.QUARTER);&#xD;
-			int availableDimes = map.get(ChangeRequestorConstants.DIME);&#xD;
-			int availableNickels = map.get(ChangeRequestorConstants.NICKEL);&#xD;
-			int availablePennies = map.get(ChangeRequestorConstants.PENNY);&#xD;
-&#xD;
-			bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);&#xD;
-			bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);&#xD;
-			bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);&#xD;
-			bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);&#xD;
-&#xD;
-			System.out.println(&quot;Bill : &quot; + bill);&#xD;
-&#xD;
-			coinsTray.setCoins(coins);&#xD;
-		} else {&#xD;
-			throw new ChangeRequestorException(&quot;Bill of &quot; + bill + &quot; is not in available Bills &quot;);&#xD;
-		}&#xD;
-&#xD;
-		return coinsTray;&#xD;
-	</body>
-                </ownedBehavior>
                 <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_MrqVIDEMEeyQGr3C5SIlrA" name="getChange" specification="_Mrdg0DEMEeyQGr3C5SIlrA">
                   <ownedParameter xmi:id="_MrqVITEMEeyQGr3C5SIlrA" name="bill">
                     <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
@@ -291,14 +247,60 @@
 		return bill;&#xD;
 	</body>
                 </ownedBehavior>
-                <ownedOperation xmi:id="_aqVjYDD0EeyQGr3C5SIlrA" name="calculateChangeForABill" method="_a4y2JDD0EeyQGr3C5SIlrA" raisedException="_aqBaUDD0EeyQGr3C5SIlrA">
-                  <ownedParameter xmi:id="_aqVjYTD0EeyQGr3C5SIlrA" name="bill">
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_xOc6pDEiEeyQGr3C5SIlrA" name="calculateChangeForABill" specification="_xOcTkDEiEeyQGr3C5SIlrA">
+                  <ownedParameter xmi:id="_xOc6pTEiEeyQGr3C5SIlrA" name="bill">
                     <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
                   </ownedParameter>
-                  <ownedParameter xmi:id="_azTSIDD0EeyQGr3C5SIlrA" type="_aqxBMDD0EeyQGr3C5SIlrA" direction="return"/>
-                </ownedOperation>
+                  <ownedParameter xmi:id="_xOc6pjEiEeyQGr3C5SIlrA" name="minCoins">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_xOc6pzEiEeyQGr3C5SIlrA" type="_aqxBMDD0EeyQGr3C5SIlrA" direction="return">
+                    <name xsi:nil="true"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>boolean contains = ChangeRequestorConstants.availableBills.contains((int) bill);&#xD;
+&#xD;
+		CoinsTray coinsTray = new CoinsTray();&#xD;
+&#xD;
+		if (contains) {&#xD;
+			List&lt;Coins_Detail> coinsAvailable = coinRepository.findAll();&#xD;
+			// Map to have type of coins as Key and no of coins as Values&#xD;
+			Map&lt;Double, Integer> map = coinsAvailable.stream()&#xD;
+					.collect(Collectors.toMap(Coins_Detail::getCoinType, Coins_Detail::getCoinCount));&#xD;
+			// Total amount based on available coins&#xD;
+			double availableAmount = ChangeRequestorUtils.availableAmount(coinsAvailable);&#xD;
+			if (availableAmount &lt; bill) {&#xD;
+				throw new ChangeRequestorException(&quot;Not enough coins available for &quot; + bill + &quot; 's  bill &quot;);&#xD;
+			}&#xD;
+			List&lt;Coins> coins = coinsTray.getCoins();&#xD;
+			// Retrieved values of each type of Coins&#xD;
+			int availableQuarters = map.get(ChangeRequestorConstants.QUARTER);&#xD;
+			int availableDimes = map.get(ChangeRequestorConstants.DIME);&#xD;
+			int availableNickels = map.get(ChangeRequestorConstants.NICKEL);&#xD;
+			int availablePennies = map.get(ChangeRequestorConstants.PENNY);&#xD;
+&#xD;
+			if (minCoins) {&#xD;
+				bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);&#xD;
+				bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);&#xD;
+				bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);&#xD;
+				bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);&#xD;
+			} else {&#xD;
+				bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);&#xD;
+				bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);&#xD;
+				bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);&#xD;
+				bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);&#xD;
+&#xD;
+			}&#xD;
+			coinsTray.setCoins(coins);&#xD;
+		} else {&#xD;
+			throw new ChangeRequestorException(&quot;Bill of &quot; + bill + &quot; is not in available Bills &quot;);&#xD;
+		}&#xD;
+&#xD;
+		return coinsTray;&#xD;
+	</body>
+                </ownedBehavior>
                 <ownedOperation xmi:id="_Mrdg0DEMEeyQGr3C5SIlrA" name="getChange" visibility="private" method="_MrqVIDEMEeyQGr3C5SIlrA">
-                  <ownedComment xmi:id="_bhN0IDEMEeyQGr3C5SIlrA">
+                  <ownedComment xmi:id="_DFYf8DEjEeyQGr3C5SIlrA">
                     <body>get change&#xD;
 	 * &#xD;
 	 * @param bill&#xD;
@@ -321,44 +323,62 @@
                     <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
                   </ownedParameter>
                 </ownedOperation>
+                <ownedOperation xmi:id="_xOcTkDEiEeyQGr3C5SIlrA" name="calculateChangeForABill" method="_xOc6pDEiEeyQGr3C5SIlrA" raisedException="_aqBaUDD0EeyQGr3C5SIlrA">
+                  <ownedParameter xmi:id="_xOcTkTEiEeyQGr3C5SIlrA" name="bill">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_xOc6oDEiEeyQGr3C5SIlrA" name="minCoins">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_xOc6oTEiEeyQGr3C5SIlrA" type="_aqxBMDD0EeyQGr3C5SIlrA" direction="return"/>
+                </ownedOperation>
               </packagedElement>
               <packagedElement xmi:type="uml:Association" xmi:id="_a5NF0TD0EeyQGr3C5SIlrA" name="" memberEnd="_a5NF0jD0EeyQGr3C5SIlrA _a31M0DD0EeyQGr3C5SIlrA">
                 <ownedEnd xmi:id="_a5NF0jD0EeyQGr3C5SIlrA" name="" type="_aqTHIDD0EeyQGr3C5SIlrA" association="_a5NF0TD0EeyQGr3C5SIlrA"/>
               </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_aqsIsDD0EeyQGr3C5SIlrA" name="ChangeCalculatorService">
-              <ownedOperation xmi:id="_aqt94DD0EeyQGr3C5SIlrA" name="calculateChangeForABill" raisedException="_aqBaUDD0EeyQGr3C5SIlrA">
-                <ownedParameter xmi:id="_aqt94TD0EeyQGr3C5SIlrA" name="bill">
+              <ownedOperation xmi:id="_n78NcDEiEeyQGr3C5SIlrA" name="calculateChangeForABill" raisedException="_aqBaUDD0EeyQGr3C5SIlrA">
+                <ownedParameter xmi:id="_n78NcTEiEeyQGr3C5SIlrA" name="bill">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_a1C-kDD0EeyQGr3C5SIlrA" type="_aqxBMDD0EeyQGr3C5SIlrA" direction="return"/>
+                <ownedParameter xmi:id="_n78NcjEiEeyQGr3C5SIlrA" name="minCoin">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_n78NczEiEeyQGr3C5SIlrA" type="_aqxBMDD0EeyQGr3C5SIlrA" direction="return"/>
               </ownedOperation>
             </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_aoUKIDD0EeyQGr3C5SIlrA" name="controller">
-            <packagedElement xmi:type="uml:Class" xmi:id="_apnKoDD0EeyQGr3C5SIlrA" name="ChangeRequestorController" visibility="package">
+            <packagedElement xmi:type="uml:Class" xmi:id="_apnKoDD0EeyQGr3C5SIlrA" name="ChangeRequestorController" visibility="public">
               <ownedAttribute xmi:id="_a3xicDD0EeyQGr3C5SIlrA" name="service" visibility="private" type="_aqsIsDD0EeyQGr3C5SIlrA" association="_a5BfoDD0EeyQGr3C5SIlrA"/>
-              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_a4rhYDD0EeyQGr3C5SIlrA" name="getChange" specification="_apyw0DD0EeyQGr3C5SIlrA">
-                <ownedParameter xmi:id="_a4rhYTD0EeyQGr3C5SIlrA" name="bill">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kNXC4DEiEeyQGr3C5SIlrA" name="getChange" specification="_kNNR4DEiEeyQGr3C5SIlrA">
+                <ownedParameter xmi:id="_kNXC4TEiEeyQGr3C5SIlrA" name="bill">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_a4rhYjD0EeyQGr3C5SIlrA" type="_awOwATD0EeyQGr3C5SIlrA" direction="return">
+                <ownedParameter xmi:id="_kNXC4jEiEeyQGr3C5SIlrA" name="minimumcoin">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_kNXC4zEiEeyQGr3C5SIlrA" type="_awOwATD0EeyQGr3C5SIlrA" direction="return">
                   <name xsi:nil="true"/>
                 </ownedParameter>
                 <language>java</language>
                 <body>try {&#xD;
-			return new ResponseEntity&lt;CoinsTray>(service.calculateChangeForABill(bill), HttpStatus.OK);&#xD;
+			return new ResponseEntity&lt;CoinsTray>(service.calculateChangeForABill(bill,Boolean.valueOf(minimumcoin)), HttpStatus.OK);&#xD;
 		} catch (ChangeRequestorException e) {&#xD;
 			throw new ChangeRequestorException(e.getMessage());&#xD;
 		}&#xD;
 &#xD;
 	</body>
               </ownedBehavior>
-              <ownedOperation xmi:id="_apyw0DD0EeyQGr3C5SIlrA" name="getChange" visibility="package" method="_a4rhYDD0EeyQGr3C5SIlrA">
-                <ownedParameter xmi:id="_apzX4DD0EeyQGr3C5SIlrA" name="bill">
+              <ownedOperation xmi:id="_kNNR4DEiEeyQGr3C5SIlrA" name="getChange" method="_kNXC4DEiEeyQGr3C5SIlrA">
+                <ownedParameter xmi:id="_kNNR4TEiEeyQGr3C5SIlrA" name="bill">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_a2uZkDD0EeyQGr3C5SIlrA" type="_awOwATD0EeyQGr3C5SIlrA" direction="return"/>
+                <ownedParameter xmi:id="_kNNR4jEiEeyQGr3C5SIlrA" name="minimumcoin">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_kNN48DEiEeyQGr3C5SIlrA" type="_awOwATD0EeyQGr3C5SIlrA" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="_a5BfoDD0EeyQGr3C5SIlrA" name="" memberEnd="_a5BfoTD0EeyQGr3C5SIlrA _a3xicDD0EeyQGr3C5SIlrA">
@@ -519,6 +539,63 @@
           <packagedElement xmi:type="uml:Association" xmi:id="_a5gAwDD0EeyQGr3C5SIlrA" name="" memberEnd="_a5gAwTD0EeyQGr3C5SIlrA _a4f7MTD0EeyQGr3C5SIlrA">
             <ownedEnd xmi:id="_a5gAwTD0EeyQGr3C5SIlrA" name="" type="_arCG8DD0EeyQGr3C5SIlrA" association="_a5gAwDD0EeyQGr3C5SIlrA"/>
           </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ddw00DEWEeyQGr3C5SIlrA" name="ArrivalController"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_s30IADEWEeyQGr3C5SIlrA" name="ChangeRequestorControllerTest">
+            <eAnnotations xmi:id="_s30IATEWEeyQGr3C5SIlrA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s30IAjEWEeyQGr3C5SIlrA" source="codegen">
+                <details xmi:id="_s30IAzEWEeyQGr3C5SIlrA" key="codegenDirectory" value="/changeRequestor"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_s33LUDEWEeyQGr3C5SIlrA" name="mvc" visibility="private" type="_dcoMYTEWEeyQGr3C5SIlrA" association="_s35nkDEWEeyQGr3C5SIlrA"/>
+            <ownedAttribute xmi:id="_s34ZcDEWEeyQGr3C5SIlrA" name="arrivalController" visibility="private" type="_ddw00DEWEeyQGr3C5SIlrA" association="_s3_uMDEWEeyQGr3C5SIlrA"/>
+            <ownedAttribute xmi:id="_xILJ8DEWEeyQGr3C5SIlrA" name="controller" visibility="private" type="_apnKoDD0EeyQGr3C5SIlrA" association="_xILxADEWEeyQGr3C5SIlrA"/>
+            <ownedAttribute xmi:id="_7JH1ADEXEeyQGr3C5SIlrA" name="changeRepo" visibility="private" type="_7JBuYDEXEeyQGr3C5SIlrA" association="_7JJDIDEXEeyQGr3C5SIlrA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_s35AgDEWEeyQGr3C5SIlrA" name="getArrivals" specification="_s30vETEWEeyQGr3C5SIlrA">
+              <language>java</language>
+              <body>ResponseEntity&lt;CoinsTray> responseEntity=new ResponseEntity&lt;CoinsTray>(HttpStatus.ACCEPTED);&#xD;
+    CoinsTray body = responseEntity.getBody();&#xD;
+    List&lt;Coins> coinsList = body.getCoins();&#xD;
+    coinsList.add(new Coins(ChangeRequestorConstants.QUARTER, 80));&#xD;
+    &#xD;
+    &#xD;
+&#xD;
+    given(controller.getChange(20)).willReturn(responseEntity);&#xD;
+&#xD;
+    mvc.perform(get(&quot;all&quot;)&#xD;
+            .contentType(APPLICATION_JSON))&#xD;
+            .andExpect(status().isOk())&#xD;
+            .andExpect(jsonPath(&quot;$&quot;, hasSize(1)))&#xD;
+            .andExpect(jsonPath(&quot;$[0].noOfCoins&quot;, is(80)));&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_s35AgTEWEeyQGr3C5SIlrA" name="getArrivalsById" specification="_s31WIjEWEeyQGr3C5SIlrA">
+              <language>java</language>
+              <body>Arrival arrival = new Arrival();&#xD;
+		arrival.setCity(&quot;Yerevan&quot;);&#xD;
+&#xD;
+		given(arrivalController.getArrivalById(arrival.getId())).willReturn(arrival);&#xD;
+&#xD;
+		mvc.perform(get(VERSION + ARRIVAL + arrival.getId()).with(user(&quot;blaze&quot;).password(&quot;Q1w2e3r4&quot;))&#xD;
+				.contentType(APPLICATION_JSON)).andExpect(status().isOk())&#xD;
+				.andExpect(jsonPath(&quot;city&quot;, is(arrival.getCity())));&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_s30vETEWEeyQGr3C5SIlrA" name="getArrivals" method="_s35AgDEWEeyQGr3C5SIlrA" raisedException="_dd2UYTEWEeyQGr3C5SIlrA"/>
+            <ownedOperation xmi:id="_s31WIjEWEeyQGr3C5SIlrA" name="getArrivalsById" method="_s35AgTEWEeyQGr3C5SIlrA" raisedException="_dd2UYTEWEeyQGr3C5SIlrA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_s35nkDEWEeyQGr3C5SIlrA" name="" memberEnd="_s35nkTEWEeyQGr3C5SIlrA _s33LUDEWEeyQGr3C5SIlrA">
+            <ownedEnd xmi:id="_s35nkTEWEeyQGr3C5SIlrA" name="" type="_s30IADEWEeyQGr3C5SIlrA" association="_s35nkDEWEeyQGr3C5SIlrA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_s3_uMDEWEeyQGr3C5SIlrA" name="" memberEnd="_s3_uMTEWEeyQGr3C5SIlrA _s34ZcDEWEeyQGr3C5SIlrA">
+            <ownedEnd xmi:id="_s3_uMTEWEeyQGr3C5SIlrA" name="" type="_s30IADEWEeyQGr3C5SIlrA" association="_s3_uMDEWEeyQGr3C5SIlrA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_xILxADEWEeyQGr3C5SIlrA" name="" memberEnd="_xILxATEWEeyQGr3C5SIlrA _xILJ8DEWEeyQGr3C5SIlrA">
+            <ownedEnd xmi:id="_xILxATEWEeyQGr3C5SIlrA" name="" type="_s30IADEWEeyQGr3C5SIlrA" association="_xILxADEWEeyQGr3C5SIlrA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7JBuYDEXEeyQGr3C5SIlrA" name="ChangeRepository"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_7JJDIDEXEeyQGr3C5SIlrA" name="" memberEnd="_7JJDITEXEeyQGr3C5SIlrA _7JH1ADEXEeyQGr3C5SIlrA">
+            <ownedEnd xmi:id="_7JJDITEXEeyQGr3C5SIlrA" name="" type="_s30IADEWEeyQGr3C5SIlrA" association="_7JJDIDEXEeyQGr3C5SIlrA"/>
+          </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_aoGHsDD0EeyQGr3C5SIlrA" name="springframework">
@@ -534,6 +611,7 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_aoHV0DD0EeyQGr3C5SIlrA" name="http">
           <packagedElement xmi:type="uml:Enumeration" xmi:id="_av8cIDD0EeyQGr3C5SIlrA" name="HttpStatus"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_awOwATD0EeyQGr3C5SIlrA" name="ResponseEntity"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ddS6wDEWEeyQGr3C5SIlrA" name="MediaType"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_aoH84DD0EeyQGr3C5SIlrA" name="web">
           <packagedElement xmi:type="uml:Package" xmi:id="_aoH84TD0EeyQGr3C5SIlrA" name="bind">
@@ -544,6 +622,7 @@
               <packagedElement xmi:type="uml:Interface" xmi:id="_axEdgTD0EeyQGr3C5SIlrA" name="RestController"/>
               <packagedElement xmi:type="uml:Interface" xmi:id="_axtWsTD0EeyQGr3C5SIlrA" name="ControllerAdvice"/>
               <packagedElement xmi:type="uml:Interface" xmi:id="_ax4V0DD0EeyQGr3C5SIlrA" name="ExceptionHandler"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_332cEDEYEeyQGr3C5SIlrA" name="PostMapping"/>
             </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_aoiMkDD0EeyQGr3C5SIlrA" name="context">
@@ -588,6 +667,18 @@
             <packagedElement xmi:type="uml:Package" xmi:id="_apRzcjD0EeyQGr3C5SIlrA" name="context">
               <packagedElement xmi:type="uml:Interface" xmi:id="_a2hlQDD0EeyQGr3C5SIlrA" name="SpringBootTest"/>
             </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_da5HADEWEeyQGr3C5SIlrA" name="autoconfigure">
+              <packagedElement xmi:type="uml:Package" xmi:id="_da5HATEWEeyQGr3C5SIlrA" name="web">
+                <packagedElement xmi:type="uml:Package" xmi:id="_da5HAjEWEeyQGr3C5SIlrA" name="servlet">
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_dcSOIDEWEeyQGr3C5SIlrA" name="WebMvcTest"/>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_da5uEDEWEeyQGr3C5SIlrA" name="mock">
+              <packagedElement xmi:type="uml:Package" xmi:id="_da5uETEWEeyQGr3C5SIlrA" name="mockito">
+                <packagedElement xmi:type="uml:Interface" xmi:id="_dcaJ8DEWEeyQGr3C5SIlrA" name="MockBean"/>
+              </packagedElement>
+            </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_a10aoDD0EeyQGr3C5SIlrA" name="SpringApplication"/>
         </packagedElement>
@@ -601,6 +692,35 @@
             <packagedElement xmi:type="uml:Interface" xmi:id="_a2ODQTD0EeyQGr3C5SIlrA" name="Bean"/>
           </packagedElement>
         </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_da5uEjEWEeyQGr3C5SIlrA" name="test">
+          <packagedElement xmi:type="uml:Package" xmi:id="_da5uEzEWEeyQGr3C5SIlrA" name="context">
+            <packagedElement xmi:type="uml:Package" xmi:id="_da5uFDEWEeyQGr3C5SIlrA" name="junit4">
+              <packagedElement xmi:type="uml:Class" xmi:id="_dchesTEWEeyQGr3C5SIlrA" name="SpringRunner"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_da5uFTEWEeyQGr3C5SIlrA" name="web">
+            <packagedElement xmi:type="uml:Package" xmi:id="_da5uFjEWEeyQGr3C5SIlrA" name="servlet">
+              <packagedElement xmi:type="uml:Package" xmi:id="_da7jQDEWEeyQGr3C5SIlrA" name="request">
+                <packagedElement xmi:type="uml:Class" xmi:id="_ddg9MTEWEeyQGr3C5SIlrA" name="MockMvcRequestBuilders"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_da7jQTEWEeyQGr3C5SIlrA" name="result">
+                <packagedElement xmi:type="uml:Class" xmi:id="_ddo5ATEWEeyQGr3C5SIlrA" name="MockMvcResultMatchers"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_dcoMYTEWEeyQGr3C5SIlrA" name="MockMvc"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_da68MTEWEeyQGr3C5SIlrA" name="security">
+          <packagedElement xmi:type="uml:Package" xmi:id="_da68MjEWEeyQGr3C5SIlrA" name="test">
+            <packagedElement xmi:type="uml:Package" xmi:id="_da68MzEWEeyQGr3C5SIlrA" name="web">
+              <packagedElement xmi:type="uml:Package" xmi:id="_da68NDEWEeyQGr3C5SIlrA" name="servlet">
+                <packagedElement xmi:type="uml:Package" xmi:id="_da68NTEWEeyQGr3C5SIlrA" name="request">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_ddaPgDEWEeyQGr3C5SIlrA" name="SecurityMockMvcRequestPostProcessors"/>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_apRMYDD0EeyQGr3C5SIlrA" name="junit">
         <packagedElement xmi:type="uml:Package" xmi:id="_apRMYTD0EeyQGr3C5SIlrA" name="jupiter">
@@ -608,6 +728,21 @@
             <packagedElement xmi:type="uml:Interface" xmi:id="_a2ZCYDD0EeyQGr3C5SIlrA" name="Test"/>
           </packagedElement>
         </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_da2DsDEWEeyQGr3C5SIlrA" name="runner">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_dcK5YTEWEeyQGr3C5SIlrA" name="RunWith"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_dbqjEDEWEeyQGr3C5SIlrA" name="Test"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_da6VIzEWEeyQGr3C5SIlrA" name="hamcrest">
+        <packagedElement xmi:type="uml:Package" xmi:id="_da6VJDEWEeyQGr3C5SIlrA" name="collection">
+          <packagedElement xmi:type="uml:Class" xmi:id="_dc1nwTEWEeyQGr3C5SIlrA" name="IsCollectionWithSize"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_da6VJTEWEeyQGr3C5SIlrA" name="core">
+          <packagedElement xmi:type="uml:Class" xmi:id="_dc88gDEWEeyQGr3C5SIlrA" name="Is"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_da68MDEWEeyQGr3C5SIlrA" name="mockito">
+        <packagedElement xmi:type="uml:Class" xmi:id="_ddLmATEWEeyQGr3C5SIlrA" name="BDDMockito"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_aoctADD0EeyQGr3C5SIlrA" name="java">
@@ -625,6 +760,7 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_a2vAoDD0EeyQGr3C5SIlrA" name="lang">
         <packagedElement xmi:type="uml:Class" xmi:id="_a2vnsDD0EeyQGr3C5SIlrA" name="RuntimeException"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_a3JQUDD0EeyQGr3C5SIlrA" name="Long"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_dd2UYTEWEeyQGr3C5SIlrA" name="Exception"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_aooTMDD0EeyQGr3C5SIlrA" name="lombok">
@@ -644,6 +780,13 @@
         <packagedElement xmi:type="uml:Interface" xmi:id="_a0MC8DD0EeyQGr3C5SIlrA" name="Transactional"/>
       </packagedElement>
     </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_da6VIDEWEeyQGr3C5SIlrA" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_da6VITEWEeyQGr3C5SIlrA" name="demo">
+        <packagedElement xmi:type="uml:Package" xmi:id="_da6VIjEWEeyQGr3C5SIlrA" name="constant">
+          <packagedElement xmi:type="uml:Class" xmi:id="_dcu6ETEWEeyQGr3C5SIlrA" name="Paths"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
     <profileApplication xmi:id="_aSCYIDD0EeyQGr3C5SIlrA">
       <eAnnotations xmi:id="_aSJF0DD0EeyQGr3C5SIlrA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
@@ -661,22 +804,11 @@
     <languageName>java</languageName>
   </UMLLabProfile:TargetLanguage>
   <UMLLabProfile:LegacyStyledElement xmi:id="_aptRQDD0EeyQGr3C5SIlrA" base_Element="_apnKoDD0EeyQGr3C5SIlrA"/>
-  <UMLLabProfile:Generics xmi:id="_ap43cDD0EeyQGr3C5SIlrA" genericsValue="CoinsTray" base_Element="_apyw0DD0EeyQGr3C5SIlrA"/>
-  <UMLLabProfile:Annotations xmi:id="_ap6soDD0EeyQGr3C5SIlrA" base_Element="_apzX4DD0EeyQGr3C5SIlrA">
-    <annotations xmi:id="_ap6soTD0EeyQGr3C5SIlrA" name="PathVariable"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:Annotations xmi:id="_ap8h0DD0EeyQGr3C5SIlrA" base_Element="_apyw0DD0EeyQGr3C5SIlrA">
-    <annotations xmi:id="_ap8h0TD0EeyQGr3C5SIlrA" name="GetMapping">
-      <annotationParameters xmi:id="_ap9I4DD0EeyQGr3C5SIlrA" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_J6ruMTD_EeyQGr3C5SIlrA" value="&quot;/bill/{bill}&quot;"/>
-      </annotationParameters>
-    </annotations>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_ap-XADD0EeyQGr3C5SIlrA" base_Element="_apnKoDD0EeyQGr3C5SIlrA">
     <annotations xmi:id="_ap-XATD0EeyQGr3C5SIlrA" name="RestController"/>
     <annotations xmi:id="_ap-XAjD0EeyQGr3C5SIlrA" name="RequestMapping">
       <annotationParameters xmi:id="_ap--EDD0EeyQGr3C5SIlrA" name="path" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_J6ruMDD_EeyQGr3C5SIlrA" value="&quot;/api&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_2WjncDEjEeyQGr3C5SIlrA" value="&quot;/api&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -691,9 +823,6 @@
     <annotations xmi:id="_aqLLUDD0EeyQGr3C5SIlrA" name="ControllerAdvice"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:LegacyStyledElement xmi:id="_aqUVQDD0EeyQGr3C5SIlrA" base_Element="_aqTHIDD0EeyQGr3C5SIlrA"/>
-  <UMLLabProfile:Annotations xmi:id="_aqWxgDD0EeyQGr3C5SIlrA" base_Element="_aqVjYDD0EeyQGr3C5SIlrA">
-    <annotations xmi:id="_aqWxgTD0EeyQGr3C5SIlrA" name="Override"/>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_aqXYkDD0EeyQGr3C5SIlrA" base_Element="_aqTHIDD0EeyQGr3C5SIlrA">
     <annotations xmi:id="_aqXYkTD0EeyQGr3C5SIlrA" name="Component"/>
   </UMLLabProfile:Annotations>
@@ -730,7 +859,6 @@
     <annotations xmi:id="_aqpFYTD0EeyQGr3C5SIlrA" name="Repository"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:LegacyStyledElement xmi:id="_aqtW0DD0EeyQGr3C5SIlrA" base_Element="_aqsIsDD0EeyQGr3C5SIlrA"/>
-  <UMLLabProfile:StyledElement xmi:id="_aquk8DD0EeyQGr3C5SIlrA" base_Element="_aqt94DD0EeyQGr3C5SIlrA"/>
   <UMLLabProfile:Annotations xmi:id="_aqvzEDD0EeyQGr3C5SIlrA" base_Element="_aqsIsDD0EeyQGr3C5SIlrA">
     <annotations xmi:id="_aqwaIDD0EeyQGr3C5SIlrA" name="Service"/>
   </UMLLabProfile:Annotations>
@@ -834,4 +962,75 @@
   <UMLLabProfile:Reference xmi:id="_a5nVgDD0EeyQGr3C5SIlrA" base_Element="_a5gAwDD0EeyQGr3C5SIlrA"/>
   <UMLLabProfile:StyledElement xmi:id="_MreH4zEMEeyQGr3C5SIlrA" base_Element="_Mrdg0DEMEeyQGr3C5SIlrA"/>
   <UMLLabProfile:Generics xmi:id="_MrpuEDEMEeyQGr3C5SIlrA" genericsValue="Coins" base_Element="_Mrdg0jEMEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dcK5YDEWEeyQGr3C5SIlrA" base_Element="_dbqjEDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dcRnEDEWEeyQGr3C5SIlrA" base_Element="_dcK5YTEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dcZi4DEWEeyQGr3C5SIlrA" base_Element="_dcSOIDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dchesDEWEeyQGr3C5SIlrA" base_Element="_dcaJ8DEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dcoMYDEWEeyQGr3C5SIlrA" base_Element="_dchesTEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dcu6EDEWEeyQGr3C5SIlrA" base_Element="_dcoMYTEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dc1nwDEWEeyQGr3C5SIlrA" base_Element="_dcu6ETEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dc8VcDEWEeyQGr3C5SIlrA" base_Element="_dc1nwTEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_ddLmADEWEeyQGr3C5SIlrA" base_Element="_dc88gDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_ddSTsDEWEeyQGr3C5SIlrA" base_Element="_ddLmATEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_ddZocDEWEeyQGr3C5SIlrA" base_Element="_ddS6wDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_ddg9MDEWEeyQGr3C5SIlrA" base_Element="_ddaPgDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_ddo5ADEWEeyQGr3C5SIlrA" base_Element="_ddg9MTEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_ddu_oDEWEeyQGr3C5SIlrA" base_Element="_ddo5ATEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dd2UYDEWEeyQGr3C5SIlrA" base_Element="_ddw00DEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_dd9pIDEWEeyQGr3C5SIlrA" base_Element="_dd2UYTEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_s30vEDEWEeyQGr3C5SIlrA" base_Element="_s30IADEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Annotations xmi:id="_s31WIDEWEeyQGr3C5SIlrA" base_Element="_s30vETEWEeyQGr3C5SIlrA">
+    <annotations xmi:id="_s31WITEWEeyQGr3C5SIlrA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s319MDEWEeyQGr3C5SIlrA" base_Element="_s31WIjEWEeyQGr3C5SIlrA">
+    <annotations xmi:id="_s319MTEWEeyQGr3C5SIlrA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s32kQDEWEeyQGr3C5SIlrA" base_Element="_s30IADEWEeyQGr3C5SIlrA">
+    <annotations xmi:id="_s32kQTEWEeyQGr3C5SIlrA" name="RunWith">
+      <annotationParameters xmi:id="_s32kQjEWEeyQGr3C5SIlrA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_7JIcEjEXEeyQGr3C5SIlrA" value="SpringRunner.class"/>
+      </annotationParameters>
+    </annotations>
+    <annotations xmi:id="_s32kQzEWEeyQGr3C5SIlrA" name="WebMvcTest">
+      <annotationParameters xmi:id="_s32kRDEWEeyQGr3C5SIlrA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_7JIcEzEXEeyQGr3C5SIlrA" value="ChangeRequestorController.class"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s33yYDEWEeyQGr3C5SIlrA" base_Element="_s33LUDEWEeyQGr3C5SIlrA">
+    <annotations xmi:id="_s33yYTEWEeyQGr3C5SIlrA" name="Autowired"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s34ZcTEWEeyQGr3C5SIlrA" base_Element="_s34ZcDEWEeyQGr3C5SIlrA">
+    <annotations xmi:id="_s34ZcjEWEeyQGr3C5SIlrA" name="MockBean"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_s3_HIDEWEeyQGr3C5SIlrA" base_Element="_s35nkDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_s4EmsDEWEeyQGr3C5SIlrA" base_Element="_s3_uMDEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Annotations xmi:id="_xILJ8TEWEeyQGr3C5SIlrA" base_Element="_xILJ8DEWEeyQGr3C5SIlrA">
+    <annotations xmi:id="_xILJ8jEWEeyQGr3C5SIlrA" name="MockBean"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_xIPbYDEWEeyQGr3C5SIlrA" base_Element="_xILxADEWEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_7JHN8DEXEeyQGr3C5SIlrA" base_Element="_7JBuYDEXEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Annotations xmi:id="_7JIcEDEXEeyQGr3C5SIlrA" base_Element="_7JH1ADEXEeyQGr3C5SIlrA">
+    <annotations xmi:id="_7JIcETEXEeyQGr3C5SIlrA" name="MockBean"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_7JN7oDEXEeyQGr3C5SIlrA" base_Element="_7JJDIDEXEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Reference xmi:id="_336tgDEYEeyQGr3C5SIlrA" base_Element="_332cEDEYEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Generics xmi:id="_kNVNsDEiEeyQGr3C5SIlrA" genericsValue="CoinsTray" base_Element="_kNNR4DEiEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Annotations xmi:id="_kNVNsTEiEeyQGr3C5SIlrA" base_Element="_kNNR4TEiEeyQGr3C5SIlrA">
+    <annotations xmi:id="_kNVNsjEiEeyQGr3C5SIlrA" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_kNV0wDEiEeyQGr3C5SIlrA" base_Element="_kNNR4jEiEeyQGr3C5SIlrA">
+    <annotations xmi:id="_kNV0wTEiEeyQGr3C5SIlrA" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_kNV0wjEiEeyQGr3C5SIlrA" base_Element="_kNNR4DEiEeyQGr3C5SIlrA">
+    <annotations xmi:id="_VZKZUDEjEeyQGr3C5SIlrA" name="GetMapping">
+      <annotationParameters xmi:id="_VZLAYDEjEeyQGr3C5SIlrA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_2WjncTEjEeyQGr3C5SIlrA" value="&quot;/bill/{bill}/{minimumcoin}&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_n78NdDEiEeyQGr3C5SIlrA" base_Element="_n78NcDEiEeyQGr3C5SIlrA"/>
+  <UMLLabProfile:Annotations xmi:id="_xOc6ojEiEeyQGr3C5SIlrA" base_Element="_xOcTkDEiEeyQGr3C5SIlrA">
+    <annotations xmi:id="_xOc6ozEiEeyQGr3C5SIlrA" name="Override"/>
+  </UMLLabProfile:Annotations>
 </xmi:XMI>

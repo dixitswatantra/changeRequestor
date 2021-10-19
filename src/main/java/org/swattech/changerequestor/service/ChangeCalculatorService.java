@@ -7,7 +7,7 @@ import org.swattech.changerequestor.model.CoinsTray;
 @Service
 public interface ChangeCalculatorService {
 
-	CoinsTray calculateChangeForABill(double bill) throws ChangeRequestorException;
+	CoinsTray calculateChangeForABill(double bill,boolean minCoin) throws ChangeRequestorException;
 
 //	void addCoins(List<Coins_Detail> coinsDetails);
 //

@@ -22,7 +22,7 @@ public class ChangeCalculatorServiceImpl implements ChangeCalculatorService {
 	public CoinRepository coinRepository;
 
 	@Override
-	public CoinsTray calculateChangeForABill(double bill) throws ChangeRequestorException {
+	public CoinsTray calculateChangeForABill(double bill, boolean minCoins) throws ChangeRequestorException {
 
 		boolean contains = ChangeRequestorConstants.availableBills.contains((int) bill);
 
@@ -45,13 +45,18 @@ public class ChangeCalculatorServiceImpl implements ChangeCalculatorService {
 			int availableNickels = map.get(ChangeRequestorConstants.NICKEL);
 			int availablePennies = map.get(ChangeRequestorConstants.PENNY);
 
-			bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);
-			bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);
-			bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);
-			bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);
+			if (minCoins) {
+				bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);
+				bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);
+				bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);
+				bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);
+			} else {
+				bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);
+				bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);
+				bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);
+				bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);
 
-			System.out.println("Bill : " + bill);
-
+			}
 			coinsTray.setCoins(coins);
 		} else {
 			throw new ChangeRequestorException("Bill of " + bill + " is not in available Bills ");

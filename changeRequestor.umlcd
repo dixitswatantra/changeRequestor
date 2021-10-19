@@ -19,6 +19,8 @@
     <targetRole xmi:id="_J5wFpTD1EeyQGr3C5SIlrA" aggregationKind="NONE" name="coinRepository" navigable="true">
       <modelElement href="changeRequestor.uml#_a4f7MTD0EeyQGr3C5SIlrA"/>
       <visualProperties xmi:id="_KK-YgDD1EeyQGr3C5SIlrA" position="241.4,249.2"/>
+      <stereotypes xmi:id="_zkIrgDEVEeyQGr3C5SIlrA" name="Annotations"/>
+      <stereotypes xmi:id="_zkZKMDEVEeyQGr3C5SIlrA" name="Annotations"/>
       <visibility xmi:id="_J5wFpjD1EeyQGr3C5SIlrA" label="-"/>
       <cardinality xmi:id="_J5wFpzD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
     </targetRole>
@@ -41,6 +43,8 @@
     <targetRole xmi:id="_J8aYFjD1EeyQGr3C5SIlrA" aggregationKind="NONE" name="service" navigable="true">
       <modelElement href="changeRequestor.uml#_a3xicDD0EeyQGr3C5SIlrA"/>
       <visualProperties xmi:id="_KLBb0DD1EeyQGr3C5SIlrA" position="2009.9918856679892,432.2999979799614"/>
+      <stereotypes xmi:id="_zj6CADEVEeyQGr3C5SIlrA" name="Annotations"/>
+      <stereotypes xmi:id="_zkkwYDEVEeyQGr3C5SIlrA" name="Annotations"/>
       <visibility xmi:id="_J8aYFzD1EeyQGr3C5SIlrA" label="-"/>
       <cardinality xmi:id="_J8aYGDD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
     </targetRole>
@@ -64,6 +68,8 @@
     <targetRole xmi:id="_J87VdjD1EeyQGr3C5SIlrA" aggregationKind="NONE" name="coins" navigable="true">
       <modelElement href="changeRequestor.uml#_a4VjIDD0EeyQGr3C5SIlrA"/>
       <visualProperties xmi:id="_KLGUUDD1EeyQGr3C5SIlrA" position="-530.652151923449,-88.79567296125299"/>
+      <stereotypes xmi:id="_zkEaEDEVEeyQGr3C5SIlrA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_zl8CUDEVEeyQGr3C5SIlrA" name="LegacyStyledElement"/>
       <visibility xmi:id="_J87VdzD1EeyQGr3C5SIlrA" label="+"/>
       <cardinality xmi:id="_J87VeDD1EeyQGr3C5SIlrA" label="1..*" max="-1" min="1"/>
     </targetRole>
@@ -86,6 +92,8 @@
     <targetRole xmi:id="_J96z8TD1EeyQGr3C5SIlrA" aggregationKind="NONE" name="coinRepository" navigable="true">
       <modelElement href="changeRequestor.uml#_a31M0DD0EeyQGr3C5SIlrA"/>
       <visualProperties xmi:id="_KLKlwDD1EeyQGr3C5SIlrA" position="-297.8155570932064,72.52638947797784"/>
+      <stereotypes xmi:id="_zj-6gDEVEeyQGr3C5SIlrA" name="Annotations"/>
+      <stereotypes xmi:id="_zl17sDEVEeyQGr3C5SIlrA" name="Annotations"/>
       <visibility xmi:id="_J98pIzD1EeyQGr3C5SIlrA" label="+"/>
       <cardinality xmi:id="_J98pIjD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
     </targetRole>
@@ -96,7 +104,7 @@
     <bendpoints xmi:id="_KK7VMTD1EeyQGr3C5SIlrA" sourceX="-1151" sourceY="-324" targetY="-142"/>
   </edges>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_OxBngDD-EeyQGr3C5SIlrA" targetItem="_J9D4UDD1EeyQGr3C5SIlrA" sourceItem="_Ow-kMDD-EeyQGr3C5SIlrA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_bhzqADEMEeyQGr3C5SIlrA" targetItem="_MwfKwDEMEeyQGr3C5SIlrA" sourceItem="_bhruMDEMEeyQGr3C5SIlrA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_DFnwgDEjEeyQGr3C5SIlrA" targetItem="_MwfKwDEMEeyQGr3C5SIlrA" sourceItem="_DFl7UDEjEeyQGr3C5SIlrA"/>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_J8hFwDD1EeyQGr3C5SIlrA" sourceConnectionVisual="_J8hs0DD1EeyQGr3C5SIlrA" text="&#xD;&#xA;@author swdixit&#xD;&#xA; *" item="_J8jiADD1EeyQGr3C5SIlrA">
     <modelElement href="changeRequestor.uml#_a42ggTD0EeyQGr3C5SIlrA"/>
   </nodes>
@@ -171,7 +179,7 @@
     <stereotypes xmi:id="_J8aYHDD1EeyQGr3C5SIlrA" name="Annotations">
       <modelElement href="changeRequestor.uml#_ap-XADD0EeyQGr3C5SIlrA"/>
     </stereotypes>
-    <visibility xmi:id="_J8aYHTD1EeyQGr3C5SIlrA" label="~"/>
+    <visibility xmi:id="_J8aYHTD1EeyQGr3C5SIlrA" label="+"/>
     <attributes xmi:id="_J8aYHjD1EeyQGr3C5SIlrA" name="service">
       <modelElement href="changeRequestor.uml#_a3xicDD0EeyQGr3C5SIlrA"/>
       <stereotypes xmi:id="_J8aYHzD1EeyQGr3C5SIlrA" name="Annotations">
@@ -183,27 +191,34 @@
         <modelElement href="changeRequestor.uml#_aqsIsDD0EeyQGr3C5SIlrA"/>
       </type>
     </attributes>
-    <operations xmi:id="_J8aYIzD1EeyQGr3C5SIlrA" name="getChange">
-      <modelElement href="changeRequestor.uml#_apyw0DD0EeyQGr3C5SIlrA"/>
-      <stereotypes xmi:id="_J8aYJDD1EeyQGr3C5SIlrA" name="Generics">
-        <modelElement href="changeRequestor.uml#_ap43cDD0EeyQGr3C5SIlrA"/>
+    <operations xmi:id="_kO7wMDEiEeyQGr3C5SIlrA" name="getChange">
+      <modelElement href="changeRequestor.uml#_kNNR4DEiEeyQGr3C5SIlrA"/>
+      <stereotypes xmi:id="_kO7wMTEiEeyQGr3C5SIlrA" name="Generics">
+        <modelElement href="changeRequestor.uml#_kNVNsDEiEeyQGr3C5SIlrA"/>
       </stereotypes>
-      <stereotypes xmi:id="_J8aYJTD1EeyQGr3C5SIlrA" name="Annotations">
-        <modelElement href="changeRequestor.uml#_ap8h0DD0EeyQGr3C5SIlrA"/>
+      <stereotypes xmi:id="_kO7wMjEiEeyQGr3C5SIlrA" name="Annotations">
+        <modelElement href="changeRequestor.uml#_kNV0wjEiEeyQGr3C5SIlrA"/>
       </stereotypes>
-      <visibility xmi:id="_J8aYJjD1EeyQGr3C5SIlrA" label="~"/>
-      <cardinality xmi:id="_J8aYJzD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_J8aYKDD1EeyQGr3C5SIlrA">
-        <modelElement href="changeRequestor.uml#_a2uZkDD0EeyQGr3C5SIlrA"/>
-        <type xmi:id="_J8aYKTD1EeyQGr3C5SIlrA" name="ResponseEntity">
+      <visibility xmi:id="_kO7wMzEiEeyQGr3C5SIlrA" label="+"/>
+      <cardinality xmi:id="_kO7wNDEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_kO7wNTEiEeyQGr3C5SIlrA">
+        <modelElement href="changeRequestor.uml#_kNN48DEiEeyQGr3C5SIlrA"/>
+        <type xmi:id="_kO7wNjEiEeyQGr3C5SIlrA" name="ResponseEntity">
           <modelElement href="changeRequestor.uml#_awOwATD0EeyQGr3C5SIlrA"/>
         </type>
       </outParameters>
-      <parameters xmi:id="_J8aYKjD1EeyQGr3C5SIlrA" name="bill">
-        <modelElement href="changeRequestor.uml#_apzX4DD0EeyQGr3C5SIlrA"/>
-        <cardinality xmi:id="_J8aYKzD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
-        <type xmi:id="_J8aYLDD1EeyQGr3C5SIlrA" name="int">
+      <parameters xmi:id="_kO7wNzEiEeyQGr3C5SIlrA" name="bill">
+        <modelElement href="changeRequestor.uml#_kNNR4TEiEeyQGr3C5SIlrA"/>
+        <cardinality xmi:id="_kO7wODEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+        <type xmi:id="_kO7wOTEiEeyQGr3C5SIlrA" name="int">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_kO7wOjEiEeyQGr3C5SIlrA" name="minimumcoin">
+        <modelElement href="changeRequestor.uml#_kNNR4jEiEeyQGr3C5SIlrA"/>
+        <cardinality xmi:id="_kO8XQDEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+        <type xmi:id="_kO8XQTEiEeyQGr3C5SIlrA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </type>
       </parameters>
     </operations>
@@ -511,24 +526,31 @@
       <modelElement href="changeRequestor.uml#_aqvzEDD0EeyQGr3C5SIlrA"/>
     </stereotypes>
     <visibility xmi:id="_J9y4JDD1EeyQGr3C5SIlrA" label="+"/>
-    <operations xmi:id="_J9y4JTD1EeyQGr3C5SIlrA" name="calculateChangeForABill">
-      <modelElement href="changeRequestor.uml#_aqt94DD0EeyQGr3C5SIlrA"/>
-      <stereotypes xmi:id="_J9y4JjD1EeyQGr3C5SIlrA" name="StyledElement">
-        <modelElement href="changeRequestor.uml#_aquk8DD0EeyQGr3C5SIlrA"/>
+    <operations xmi:id="_n8ni4DEiEeyQGr3C5SIlrA" name="calculateChangeForABill">
+      <modelElement href="changeRequestor.uml#_n78NcDEiEeyQGr3C5SIlrA"/>
+      <stereotypes xmi:id="_n8ni4TEiEeyQGr3C5SIlrA" name="StyledElement">
+        <modelElement href="changeRequestor.uml#_n78NdDEiEeyQGr3C5SIlrA"/>
       </stereotypes>
-      <visibility xmi:id="_J9y4JzD1EeyQGr3C5SIlrA" label="+"/>
-      <cardinality xmi:id="_J9y4KDD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_J9y4KTD1EeyQGr3C5SIlrA">
-        <modelElement href="changeRequestor.uml#_a1C-kDD0EeyQGr3C5SIlrA"/>
-        <type xmi:id="_J9y4KjD1EeyQGr3C5SIlrA" name="CoinsTray">
+      <visibility xmi:id="_n8ni4jEiEeyQGr3C5SIlrA" label="+"/>
+      <cardinality xmi:id="_n8ni4zEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_n8ni5DEiEeyQGr3C5SIlrA">
+        <modelElement href="changeRequestor.uml#_n78NczEiEeyQGr3C5SIlrA"/>
+        <type xmi:id="_n8ni5TEiEeyQGr3C5SIlrA" name="CoinsTray">
           <modelElement href="changeRequestor.uml#_aqxBMDD0EeyQGr3C5SIlrA"/>
         </type>
       </outParameters>
-      <parameters xmi:id="_J9y4KzD1EeyQGr3C5SIlrA" name="bill">
-        <modelElement href="changeRequestor.uml#_aqt94TD0EeyQGr3C5SIlrA"/>
-        <cardinality xmi:id="_J9y4LDD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
-        <type xmi:id="_J9y4LTD1EeyQGr3C5SIlrA" name="double">
+      <parameters xmi:id="_n8ni5jEiEeyQGr3C5SIlrA" name="bill">
+        <modelElement href="changeRequestor.uml#_n78NcTEiEeyQGr3C5SIlrA"/>
+        <cardinality xmi:id="_n8ni5zEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+        <type xmi:id="_n8ni6DEiEeyQGr3C5SIlrA" name="double">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_n8ni6TEiEeyQGr3C5SIlrA" name="minCoin">
+        <modelElement href="changeRequestor.uml#_n78NcjEiEeyQGr3C5SIlrA"/>
+        <cardinality xmi:id="_n8ni6jEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+        <type xmi:id="_n8ni6zEiEeyQGr3C5SIlrA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </type>
       </parameters>
     </operations>
@@ -554,28 +576,7 @@
         <modelElement href="changeRequestor.uml#_aqkM4DD0EeyQGr3C5SIlrA"/>
       </type>
     </attributes>
-    <operations xmi:id="_J9_FaDD1EeyQGr3C5SIlrA" name="calculateChangeForABill">
-      <modelElement href="changeRequestor.uml#_aqVjYDD0EeyQGr3C5SIlrA"/>
-      <stereotypes xmi:id="_J9_FaTD1EeyQGr3C5SIlrA" name="Annotations">
-        <modelElement href="changeRequestor.uml#_aqWxgDD0EeyQGr3C5SIlrA"/>
-      </stereotypes>
-      <visibility xmi:id="_J9_FajD1EeyQGr3C5SIlrA" label="+"/>
-      <cardinality xmi:id="_J9_FazD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_J9_FbDD1EeyQGr3C5SIlrA">
-        <modelElement href="changeRequestor.uml#_azTSIDD0EeyQGr3C5SIlrA"/>
-        <type xmi:id="_J9_FbTD1EeyQGr3C5SIlrA" name="CoinsTray">
-          <modelElement href="changeRequestor.uml#_aqxBMDD0EeyQGr3C5SIlrA"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_J9_FbjD1EeyQGr3C5SIlrA" name="bill">
-        <modelElement href="changeRequestor.uml#_aqVjYTD0EeyQGr3C5SIlrA"/>
-        <cardinality xmi:id="_J9_FbzD1EeyQGr3C5SIlrA" label="1" max="1" min="1"/>
-        <type xmi:id="_J9_FcDD1EeyQGr3C5SIlrA" name="double">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_MwfKwDEMEeyQGr3C5SIlrA" comments="_bhruMDEMEeyQGr3C5SIlrA" targetConnectionVisual="_bhzqADEMEeyQGr3C5SIlrA" name="getChange">
+    <operations xmi:id="_MwfKwDEMEeyQGr3C5SIlrA" comments="_DFl7UDEjEeyQGr3C5SIlrA" targetConnectionVisual="_DFnwgDEjEeyQGr3C5SIlrA" name="getChange">
       <modelElement href="changeRequestor.uml#_Mrdg0DEMEeyQGr3C5SIlrA"/>
       <stereotypes xmi:id="_MwfKwTEMEeyQGr3C5SIlrA" name="StyledElement">
         <modelElement href="changeRequestor.uml#_MreH4zEMEeyQGr3C5SIlrA"/>
@@ -614,6 +615,34 @@
         <cardinality xmi:id="_MwfK0DEMEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
         <type xmi:id="_MwfK0TEMEeyQGr3C5SIlrA" name="double">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_xO3KUDEiEeyQGr3C5SIlrA" name="calculateChangeForABill">
+      <modelElement href="changeRequestor.uml#_xOcTkDEiEeyQGr3C5SIlrA"/>
+      <stereotypes xmi:id="_xO3KUTEiEeyQGr3C5SIlrA" name="Annotations">
+        <modelElement href="changeRequestor.uml#_xOc6ojEiEeyQGr3C5SIlrA"/>
+      </stereotypes>
+      <visibility xmi:id="_xO3KUjEiEeyQGr3C5SIlrA" label="+"/>
+      <cardinality xmi:id="_xO3KUzEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_xO3KVDEiEeyQGr3C5SIlrA">
+        <modelElement href="changeRequestor.uml#_xOc6oTEiEeyQGr3C5SIlrA"/>
+        <type xmi:id="_xO3KVTEiEeyQGr3C5SIlrA" name="CoinsTray">
+          <modelElement href="changeRequestor.uml#_aqxBMDD0EeyQGr3C5SIlrA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_xO3KVjEiEeyQGr3C5SIlrA" name="bill">
+        <modelElement href="changeRequestor.uml#_xOcTkTEiEeyQGr3C5SIlrA"/>
+        <cardinality xmi:id="_xO3KVzEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+        <type xmi:id="_xO3KWDEiEeyQGr3C5SIlrA" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_xO3KWTEiEeyQGr3C5SIlrA" name="minCoins">
+        <modelElement href="changeRequestor.uml#_xOc6oDEiEeyQGr3C5SIlrA"/>
+        <cardinality xmi:id="_xO3KWjEiEeyQGr3C5SIlrA" label="1" max="1" min="1"/>
+        <type xmi:id="_xO3KWzEiEeyQGr3C5SIlrA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </type>
       </parameters>
     </operations>
@@ -772,7 +801,7 @@
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Ow-kMDD-EeyQGr3C5SIlrA" sourceConnectionVisual="_OxBngDD-EeyQGr3C5SIlrA" text="&#xD;&#xA;@author swdixit&#xD;&#xA; *" item="_J9D4UDD1EeyQGr3C5SIlrA">
     <modelElement href="changeRequestor.uml#_OjrvEDD-EeyQGr3C5SIlrA"/>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_bhruMDEMEeyQGr3C5SIlrA" sourceConnectionVisual="_bhzqADEMEeyQGr3C5SIlrA" text="get change&#xD;&#xA;&#x9; * &#xD;&#xA;&#x9; * @param bill&#xD;&#xA;&#x9; * @param coins&#xD;&#xA;&#x9; * @param availableQuarters&#xD;&#xA;&#x9; * @param type&#xD;&#xA;&#x9; * @return remaining bill's value" item="_MwfKwDEMEeyQGr3C5SIlrA">
-    <modelElement href="changeRequestor.uml#_bhN0IDEMEeyQGr3C5SIlrA"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_DFl7UDEjEeyQGr3C5SIlrA" sourceConnectionVisual="_DFnwgDEjEeyQGr3C5SIlrA" text="get change&#xD;&#xA;&#x9; * &#xD;&#xA;&#x9; * @param bill&#xD;&#xA;&#x9; * @param coins&#xD;&#xA;&#x9; * @param availableQuarters&#xD;&#xA;&#x9; * @param type&#xD;&#xA;&#x9; * @return remaining bill's value" item="_MwfKwDEMEeyQGr3C5SIlrA">
+    <modelElement href="changeRequestor.uml#_DFYf8DEjEeyQGr3C5SIlrA"/>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
