@@ -31,7 +31,7 @@ Bonus:
 # SOLUTION :
 
  # API : 
-        http://localhost:8080/api/bill/{bill}
+        http://localhost:8080/api/bill/50
  
  # RESPONSE : {
               "coins": [
