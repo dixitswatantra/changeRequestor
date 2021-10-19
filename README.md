@@ -26,3 +26,7 @@ Bonus:
 • Allow for number of coins to be configurable and easily changed
 
 • Allow for the user to request for the most amount of coins to make change
+
+
+
+TO DO : TEST CASES FOR CODE COVERAGE
