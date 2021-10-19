@@ -35,7 +35,9 @@ Bonus:
         
         bill param : Bill amount
         minimumcoins param : true or fale to return minimum coins or maximum coins for a bill amount
-        
+ 
+ # TESTS COVERED :
+ # 1.
  # REQUEST :
         http://localhost:8080/api/bill/10/true
  # RESPONSE :
@@ -47,7 +49,8 @@ Bonus:
         }
      ]
 } 
-            
+ 
+# 2. 
 # REQUEST :    
        http://localhost:8080/api/bill/10/false
 # RESPONSE :       
@@ -68,6 +71,7 @@ Bonus:
     ]
 }
 
+# 3. 
 # REQUEST :
        http://localhost:8080/api/bill/100/false
 # RESPONSE :
@@ -78,6 +82,7 @@ Bonus:
     ]
 }
 
+# 4. 
 # REQUEST :
       http://localhost:8080/api/bill/55/false
 # RESPONSE :
