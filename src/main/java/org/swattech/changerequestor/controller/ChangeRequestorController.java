@@ -25,7 +25,7 @@ class ChangeRequestorController {
 		} catch (ChangeRequestorException e) {
 			throw new ChangeRequestorException(e.getMessage());
 		}
-		
+
 	}
 
 }

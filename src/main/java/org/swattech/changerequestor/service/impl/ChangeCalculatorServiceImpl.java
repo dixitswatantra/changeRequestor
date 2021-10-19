@@ -29,75 +29,28 @@ public class ChangeCalculatorServiceImpl implements ChangeCalculatorService {
 		CoinsTray coinsTray = new CoinsTray();
 
 		if (contains) {
-			int quarters = 0;
-			int dimes = 0;
-			int nickels = 0;
-			int pennies = 0;
 			List<Coins_Detail> coinsAvailable = coinRepository.findAll();
+			// Map to have type of coins as Key and no of coins as Values
 			Map<Double, Integer> map = coinsAvailable.stream()
 					.collect(Collectors.toMap(Coins_Detail::getCoinType, Coins_Detail::getCoinCount));
-			System.out.println(map);
+			// Total amount based on available coins
 			double availableAmount = ChangeRequestorUtils.availableAmount(coinsAvailable);
-			System.out.println(availableAmount);
 			if (availableAmount < bill) {
 				throw new ChangeRequestorException("Not enough coins available for " + bill + " 's  bill ");
 			}
-			System.out.println("bill :: "+bill);
-			if ((int) map.get(ChangeRequestorConstants.QUARTER) > 0) {
-				quarters = (int) (bill / 0.25);
-				if (quarters > 0) {
-					bill = bill % 0.25;
-					System.out.println(quarters + " quarter coin(s)");
-				}
-			}
-			System.out.println("bill :: "+bill);
-			if ((int) map.get(ChangeRequestorConstants.DIME) > 0) {
-				dimes = (int) (bill / 0.10);
-				if (dimes > 0) {
-					bill = bill % 0.10;
-					System.out.println(dimes + " dime coin(s)");
-				}
-			}
-			System.out.println("bill :: "+bill);
-			if ((int) map.get(ChangeRequestorConstants.NICKEL) > 0) {
-				nickels = (int) (bill / 0.05);
-				if (nickels > 0) {
-					bill = bill % 0.05;
-					System.out.println(nickels + " nickel coin(s)");
-				}
-			}
-			pennies = (int) bill;
-
 			List<Coins> coins = coinsTray.getCoins();
+			// Retrieved values of each type of Coins
+			int availableQuarters = map.get(ChangeRequestorConstants.QUARTER);
+			int availableDimes = map.get(ChangeRequestorConstants.DIME);
+			int availableNickels = map.get(ChangeRequestorConstants.NICKEL);
+			int availablePennies = map.get(ChangeRequestorConstants.PENNY);
 
-			int updatedQuarters = ((int) map.get(ChangeRequestorConstants.QUARTER) - quarters);
-			updatedQuarters = updatedQuarters > 0 ? updatedQuarters : 0;
-			if (quarters != 0) {
-				Coins quarter = new Coins(ChangeRequestorConstants.QUARTER, quarters);
-				coins.add(quarter);
-				coinRepository.updateCounts(ChangeRequestorConstants.QUARTER, updatedQuarters);
-			}
-			int updatedDimes = ((int) map.get(ChangeRequestorConstants.DIME) - dimes);
-			updatedDimes = updatedDimes > 0 ? updatedDimes : 0;
-			if (dimes != 0) {
-				Coins dime = new Coins(ChangeRequestorConstants.DIME, dimes);
-				coins.add(dime);
-				coinRepository.updateCounts(ChangeRequestorConstants.DIME, updatedDimes);
-			}
-			int updatedNickels = ((int) map.get(ChangeRequestorConstants.NICKEL) - nickels);
-			updatedNickels = updatedNickels > 0 ? updatedNickels : 0;
-			if (nickels != 0) {
-				Coins nickel = new Coins(ChangeRequestorConstants.NICKEL, nickels);
-				coins.add(nickel);
-				coinRepository.updateCounts(ChangeRequestorConstants.NICKEL, updatedNickels);
-			}
-			int updatedPennies = ((int) map.get(ChangeRequestorConstants.PENNY) - pennies);
-			updatedPennies = updatedPennies > 0 ? updatedPennies : 0;
-			if (pennies != 0) {
-				Coins penny = new Coins(ChangeRequestorConstants.PENNY, pennies);
-				coins.add(penny);
-				coinRepository.updateCounts(ChangeRequestorConstants.PENNY, updatedPennies);
-			}
+			bill = getChange(bill, coins, availableQuarters, ChangeRequestorConstants.QUARTER);
+			bill = getChange(bill, coins, availableDimes, ChangeRequestorConstants.DIME);
+			bill = getChange(bill, coins, availableNickels, ChangeRequestorConstants.NICKEL);
+			bill = getChange(bill, coins, availablePennies, ChangeRequestorConstants.PENNY);
+
+			System.out.println("Bill : " + bill);
 
 			coinsTray.setCoins(coins);
 		} else {
@@ -105,6 +58,35 @@ public class ChangeCalculatorServiceImpl implements ChangeCalculatorService {
 		}
 
 		return coinsTray;
+	}
+
+	/**
+	 * get change
+	 * 
+	 * @param bill
+	 * @param coins
+	 * @param availableQuarters
+	 * @param type
+	 * @return remaining bill's value
+	 */
+	private double getChange(double bill, List<Coins> coins, int availableQuarters, double type) {
+		int quarters;
+		if (availableQuarters > 0) {
+			quarters = (int) (bill / type);
+			int updatedQuarters = (availableQuarters - quarters);
+			if (quarters != 0) {
+				if (updatedQuarters <= 0) {
+					quarters = availableQuarters;
+					updatedQuarters = 0;
+				}
+				bill = bill - (type * Double.valueOf(quarters));
+				Coins quarter = new Coins(type, quarters);
+				coins.add(quarter);
+				if (quarters >= 0)
+					coinRepository.updateCounts(type, updatedQuarters);
+			}
+		}
+		return bill;
 	}
 
 }
