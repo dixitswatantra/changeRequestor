@@ -42,6 +42,9 @@ Bonus:
               ]
             }
             
+            
+            http://localhost:8080/api/bill/3
+            
             {
               "message": "Bill of 3.0 is not in available Bills ",
               "details": [
