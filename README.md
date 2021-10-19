@@ -31,26 +31,62 @@ Bonus:
 # SOLUTION :
 
  # API : 
-        http://localhost:8080/api/bill/50
- 
- # RESPONSE : {
-              "coins": [
-                 {
-                  "coin": 0.25,
-                  "noOfCoins": 200
-                 }
-              ]
-            }
+        http://localhost:8080/api/bill/{bill}/{minimumcoins}
+        
+        bill param : Bill amount
+        minimumcoins param : true or fale to return minimum coins or maximum coins for a bill amount
+        
+ # REQUEST :
+        http://localhost:8080/api/bill/10/true
+ # RESPONSE :
+{
+    "coins": [
+        {
+            "coin": 0.25,
+            "noOfCoins": 40
+        }
+     ]
+} 
             
-            
-            http://localhost:8080/api/bill/3
-            
-            {
-              "message": "Bill of 3.0 is not in available Bills ",
-              "details": [
-                  "Bill of 3.0 is not in available Bills "
-              ]
-            }
+# REQUEST :    
+       http://localhost:8080/api/bill/10/false
+# RESPONSE :       
+{
+    "coins": [
+        {
+            "coin": 0.01,
+            "noOfCoins": 100
+        },
+        {
+            "coin": 0.05,
+            "noOfCoins": 100
+        },
+        {
+            "coin": 0.1,
+            "noOfCoins": 40
+        }
+    ]
+}
+
+# REQUEST :
+       http://localhost:8080/api/bill/100/false
+# RESPONSE :
+{
+    "message": "Not enough coins available for 100.0 's  bill ",
+    "details": [
+        "Not enough coins available for 100.0 's  bill "
+    ]
+}
+
+# REQUEST :
+      http://localhost:8080/api/bill/55/false
+# RESPONSE :
+{
+    "message": "Bill of 55.0 is not in available Bills ",
+    "details": [
+        "Bill of 55.0 is not in available Bills "
+    ]
+}
 
 ![image](https://user-images.githubusercontent.com/43265292/137948157-5f9f835d-c6c0-4fb3-afe1-8000f99f5b9a.png)
 
