@@ -28,6 +28,21 @@ Bonus:
 • Allow for the user to request for the most amount of coins to make change
 
 
+# SOLUTION :
+
+ # API : 
+        http://localhost:8080/api/bill/{bill}
+ 
+ # RESPONSE : {
+              "coins": [
+                 {
+                  "coin": 0.25,
+                  "noOfCoins": 200
+                 }
+              ]
+            }
+
+
 
 # TO DO : TEST CASES FOR CODE COVERAGE
 # TO DO : LOGGING
